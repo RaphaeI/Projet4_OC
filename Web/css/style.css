@@ -1,0 +1,158 @@
+body{
+	background-color: #ECECEC !important;
+	font-family: 'Maven Pro', sans-serif !important;
+}
+
+a{
+	color: #444 ;
+}
+
+a:hover{
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+h2{
+		text-transform: lowercase;
+	font-weight: bold;
+}
+
+/* HEADER */
+
+header{
+	text-align: left;
+	background-color: white;
+	padding: 10px 0 10px 0;
+	font-size: 0.8em;
+	letter-spacing: 2px;
+}
+
+ul{
+	padding-left: 0;
+	margin: 0 !important;
+}
+
+nav{
+	margin-left: 0;
+	padding-left: 0;
+}
+
+nav li{
+	list-style: none;
+	display: inline-flex;
+	text-transform: uppercase;
+	margin-right: 20px;
+}
+
+#adminMenu{
+	float: right;
+	position: relative;
+}
+
+#adminMenu > ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: white;
+}
+
+#adminMenu:hover>ul{
+	display: block;
+}
+
+/* ARTICLES */
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	background-color: white;
+    padding: 2%;	
+}
+
+#homeNews{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+section h2,h3{
+	text-align: center;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	padding: 2%;
+	margin-bottom: 2%;
+	width: 50%;
+}
+
+#blackSection{
+	background-color: #444;
+	color: white;
+}
+
+#blackSection a{
+	color: white;
+}
+
+#blackSection a:hover{
+	color : #929292;
+}
+
+article{
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer{
+	text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ADMIN */
+
+input{
+	margin-bottom: 1%;
+}
+
+input{
+	color: white !important;
+	background-color: #212529 !important;
+}
+
+.fa-newspaper, .fa-comments{
+	font-size: 10rem;
+}
+
+td, th {
+    padding-right: 2%;
+}
+input:-webkit-autofill, input:focus:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0 100px #212529 inset;
+   -webkit-text-fill-color: white;
+}
+
+hr.line{
+	width: 90%;
+	border-top: 3px double #8c8b8b;
+}
+
+#brand{
+	text-align: center;
+	margin: 5% 0 5% 0;
+	text-transform: lowercase;
+}
