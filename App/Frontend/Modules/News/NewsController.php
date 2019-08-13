@@ -85,4 +85,8 @@ class NewsController extends BackController
     $this->page->addVar('form', $form->createView());
     $this->page->addVar('title', 'Ajout d\'un commentaire');
   }
+
+  public function executeReportcomment(HTTPRequest $request){
+    
+  }
 }

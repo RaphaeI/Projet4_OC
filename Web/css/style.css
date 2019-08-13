@@ -156,3 +156,15 @@ hr.line{
 	margin: 5% 0 5% 0;
 	text-transform: lowercase;
 }
+
+/* ADMIN PANEL */
+
+#adminPanel{
+	display: flex;
+	flex-direction: row;
+}
+
+#adminPanel>div{
+	margin-right: 5%;
+	text-align: center;
+}

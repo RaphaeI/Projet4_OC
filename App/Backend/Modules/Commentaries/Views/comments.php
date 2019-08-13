@@ -6,7 +6,7 @@
 foreach ($listComments as $comments)
 {
   echo '<tr>
-  			<td>', $comments['news'], '</td>
+  			<td>', $comments['titre'], '</td>
   			<td>', $comments['auteur'], '</td>
   			<td>le ', $comments['date']->format('d/m/Y à H\hi'), '</td>
   			<td>', ($comments['date'] == $comments['date'] ? '-' : 'le '.$comments['date']->format('d/m/Y à H\hi')), '</td>
