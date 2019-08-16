@@ -1,12 +1,13 @@
 <p style="text-align: center">Il y a actuellement <?= $nombreComments ?> commentaire(s). En voici la liste :</p>
  
 <table>
-  <tr><th>News</th><th>Auteur</th><th>Date d'ajout</th><th>Dernière modification</th><th>Action</th></tr>
+  <tr><th>Id</th><th>News</th><th>Auteur</th><th>Date d'ajout</th><th>Dernière modification</th><th>Action</th></tr>
 <?php
 foreach ($listComments as $comments)
 {
   echo '<tr>
-  			<td>', $comments['titre'], '</td>
+  			<td>', $comments['id'],'</td>
+  			<td>', $comments['news'], '</td>
   			<td>', $comments['auteur'], '</td>
   			<td>le ', $comments['date']->format('d/m/Y à H\hi'), '</td>
   			<td>', ($comments['date'] == $comments['date'] ? '-' : 'le '.$comments['date']->format('d/m/Y à H\hi')), '</td>

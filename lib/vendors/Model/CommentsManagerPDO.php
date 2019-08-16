@@ -25,7 +25,7 @@ class CommentsManagerPDO extends CommentsManager
       throw new \InvalidArgumentException('L\'identifiant de la news passé doit être un nombre entier valide');
     }
     
-    $q = $this->dao->prepare('SELECT id, news, auteur, contenu, date FROM comments WHERE news = :news');
+    $q = $this->dao->prepare('SELECT * FROM comments WHERE news = :news');
     $q->bindValue(':news', $news, \PDO::PARAM_INT);
     $q->execute();
     
@@ -94,4 +94,8 @@ class CommentsManagerPDO extends CommentsManager
   {
     return $this->dao->query('SELECT COUNT(*) FROM comments')->fetchColumn();
   }
+
+    public function report($id){
+      return $this->dao->query('UPDATE comments SET reported = 1');
+    }
 }

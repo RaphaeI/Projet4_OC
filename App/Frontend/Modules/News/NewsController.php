@@ -26,10 +26,9 @@ class NewsController extends BackController
     {
       if (strlen($news->contenu()) > $nombreCaracteres)
       {
-        $debut = substr($news->contenu(), 0, $nombreCaracteres);
-        $debut = substr($debut, 0, strrpos($debut, ' ')) . '...';
+        $debut = substr(strip_tags($news->contenu()), 0, $nombreCaracteres) ;
  
-        $news->setContenu($debut);
+        $news->setContenu($debut . '...' );
       }
     }
  
@@ -86,7 +85,9 @@ class NewsController extends BackController
     $this->page->addVar('title', 'Ajout d\'un commentaire');
   }
 
-  public function executeReportcomment(HTTPRequest $request){
-    
+  public function executeReportComment(HTTPRequest $request){
+    $manager = $this->managers->getManagerOf('Comments');
+    $manager->report($request->getData('id'));
+/*     $this->app->httpResponse()->redirect('.');*/
   }
 }

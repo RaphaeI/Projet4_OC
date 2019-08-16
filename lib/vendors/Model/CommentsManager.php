@@ -59,4 +59,6 @@ abstract class CommentsManager extends Manager
    * @return void
    */
   abstract public function deleteFromNews($news);
+
+  abstract public function report($id);
 }

@@ -15,5 +15,6 @@ foreach ($listeNews as $news)
 }
 ?>
 </table>
-
-<a href="http://projet4/admin/news-insert.html"><h3>Ajouter une news</h3></a>
+<a href="http://projet4/admin/news-insert.html">
+	<h3 class="button" >Ajouter une news</h3>
+</a>
