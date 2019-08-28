@@ -31,7 +31,7 @@
 	    <?php } ?>
 	      <a href="/news-<?= $comment['news']?>/comment-report-<?= $comment['id'] ?>.html">Signaler</a>	
 	  </legend>
-	  <p><?= nl2br(htmlspecialchars($comment['contenu'])) ?></p>
+	  <p><?= strip_tags($comment['contenu']) ?></p>
 	</fieldset>
 	<?php
 	}

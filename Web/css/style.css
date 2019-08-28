@@ -71,8 +71,8 @@ main{
 	align-items: center;
     justify-content: center;
 	background-color: white;
-    padding: 2%;	
-}
+    padding: 2%;
+	}
 
 #homeNews{
 	display: flex;
@@ -210,4 +210,8 @@ section:nth-child(4n+1) .button, section:nth-child(4n+4) .button{
 section:nth-child(4n+1) .button:hover, section:nth-child(4n+4) .button:hover{
 	  background-position: left bottom;
 	  color: #444;
+}
+
+.redflag{
+	color: red;
 }

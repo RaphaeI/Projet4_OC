@@ -7,21 +7,21 @@ foreach ($listComments as $comments)
 { ?>
   <tr>
   		<td><?php echo $comments['id'] ?></td>
-      <td><?php 
+      <td><?php echo $comments['news']?></td>
+     <td><?php echo $comments['auteur'] ?></td>
+     <td><?php echo $comments['date']->format('d/m/Y à H\hi') ?></td>
+     <td><?php echo ($comments['date'] == $comments['date'] ? '-' : 'le '.$comments['date']->format('d/m/Y à H\hi')) ?></td>
+     <td><?php echo '<a href="comment-update-', $comments['id'], '.html"><i class="fas fa-edit"></i></a> <a href="comment-delete-',
+        $comments['id'], '.html"><i class="fas fa-trash"></i></a> '?></td>
+      <td>
+      <?php 
         if($comments->report() == '1'){
-          echo'signalé';
+          echo '<i class="fas fa-flag redflag"></i>';
         }
        else{
-        echo'non signalié';
-       } ?>
-<!--       <td>', $comments['news'], '</td>
-  <td>', $comments['auteur'], '</td>
-  <td>le ', $comments['date']->format('d/m/Y à H\hi'), '</td>
-  <td>', ($comments['date'] == $comments['date'] ? '-' : 'le '.$comments['date']->format('d/m/Y à H\hi')), '</td>
-  <td><a href="comment-update-', $comments['id'], '.html"><i class="fas fa-edit"></i></a> <a href="comment-delete-',
-  $comments['id'], '.html"><i class="fas fa-trash"></i></a></td>
-        <td>',if($comments['reported'] == true){echo'signalé'} else(){}, '</td>
-</tr>', "\n"; -->
+        echo '<i class="fas fa-times"></i>';
+       } ?></td>    
+</tr>
 <?php }
 ?>
 </table>
