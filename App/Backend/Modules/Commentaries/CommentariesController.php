@@ -104,7 +104,7 @@ class CommentariesController extends BackController
   }
 
   public function executeComments(HTTPRequest $request){
-    $this->page->addVar('news', 'auteur', 'contenu', 'date');
+    $this->page->addVar('news', 'auteur', 'contenu', 'date', 'reported');
  
     $manager = $this->managers->getManagerOf('Comments');
  

@@ -43,7 +43,7 @@ class CommentsManagerPDO extends CommentsManager
 
     public function getList()
   {    
-    $q = $this->dao->prepare('SELECT id, news, auteur, contenu, date FROM comments');
+    $q = $this->dao->prepare('SELECT id, news, auteur, contenu, reported, date FROM comments');
     $q->execute();
     
     $q->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, '\Entity\Comment');
