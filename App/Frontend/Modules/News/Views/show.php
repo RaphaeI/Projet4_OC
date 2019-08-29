@@ -28,8 +28,12 @@
 		<?php if ($user->isAuthenticated()) { ?> -
 	      <a href="admin/comment-update-<?= $comment['id'] ?>.html"><i class="fas fa-edit"></i></a> |
 	      <a href="admin/comment-delete-<?= $comment['id'] ?>.html"><i class="fas fa-trash"></i></a>
+	    <?php } 
+	    	if($comment['reported' == false]){
+	    ?>
+	      <a href="/news-<?= $comment['news']?>/comment-report-<?= $comment['id'] ?>.html"><i class="fas fa-flag redflag"></i></a>
 	    <?php } ?>
-	      <a href="/news-<?= $comment['news']?>/comment-report-<?= $comment['id'] ?>.html"><i class="fas fa-flag redflag"></i></a>	
+	    
 	</div>
 
 	<?php
