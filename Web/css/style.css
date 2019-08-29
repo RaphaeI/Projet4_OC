@@ -215,3 +215,10 @@ section:nth-child(4n+1) .button:hover, section:nth-child(4n+4) .button:hover{
 .redflag{
 	color: red;
 }
+
+.comment{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2%;
+}
