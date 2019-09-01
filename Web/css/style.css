@@ -44,7 +44,7 @@ nav{
 	padding-left: 0;
 }
 
-nav li{
+li{
 	list-style: none;
 	display: inline-flex;
 	text-transform: uppercase;
@@ -102,11 +102,8 @@ section{
 	backface-visibility: hidden;
 }
 section:hover{
-
--webkit-transform: scale(1.04)
+	-webkit-transform: scale(1.04)
 }
-
-
 
 article{
 	display: flex !important;
@@ -238,11 +235,15 @@ table{
 		  color: #444;
 	}
 
+	#adminPanel{
+		flex-wrap: nowrap;
+	}
+
 }
 
 
 @media (max-width: 767px){
-	
+
 	section:nth-child(odd), section:nth-child(odd) a{
 	background-color: #444;
 	color: white;

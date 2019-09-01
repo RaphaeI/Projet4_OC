@@ -20,6 +20,5 @@
     	<main class="container">
           <?= $content ?>
     	</main>
-      <?php include('footer.php')?>
   </body>
 </html>
