@@ -15,7 +15,8 @@
   <body>
       <?php include('header.php')?>
       <div id="brand">
-        <h1>Le blog de l'écrivain</h1>
+        <h1>Billet simple pour l'Alaska</h1>
+        <h3>Jean Forteroche</h3>
       </div>
     	<main class="container">
           <?= $content ?>
