@@ -9,7 +9,7 @@
 	  <p style="text-align: right;"><small><em>Modifiée le <?= $news['dateModif']->format('d/m/Y à H\hi') ?></em></small></p>
 	<?php } ?>
 		<hr class="line">
-	<p><a href="commenter-<?= $news['id'] ?>.html">Ajouter un commentaire</a></p>
+	<a href="commenter-<?= $news['id'] ?>.html"><p class="button">Ajouter un commentaire</p></a>
 
 	<?php
 	if (empty($comments))
@@ -25,15 +25,17 @@
 	<div class="comment">
 		<h5>Posté par <?= htmlspecialchars($comment['auteur']) ?> le <?= $comment['date']->format('d/m/Y à H\hi') ?></h5>   
 		<p><?= strip_tags($comment['contenu']) ?></p>
-		<?php if ($user->isAuthenticated()) { ?> -
-	      <a href="admin/comment-update-<?= $comment['id'] ?>.html"><i class="fas fa-edit"></i></a> |
+		<?php if ($user->isAuthenticated()) { ?>
+		<div id="commIcons">
+	      <a href="admin/comment-update-<?= $comment['id'] ?>.html"><i class="fas fa-edit"></i></a>
 	      <a href="admin/comment-delete-<?= $comment['id'] ?>.html"><i class="fas fa-trash"></i></a>
-	    <?php } 
-	    	if($comment['reported' == false]){
-	    ?>
-	      <a href="/news-<?= $comment['news']?>/comment-report-<?= $comment['id'] ?>.html"><i class="fas fa-flag redflag"></i></a>
+		    <?php } 
+		    	if($comment['reported' == false]){
+		    ?>
+		      <a href="/news-<?= $comment['news']?>/comment-report-<?= $comment['id'] ?>.html"><i class="fas fa-flag redflag"></i></a>
+	    </div>
 	    <?php } ?>
-	    
+
 	</div>
 
 	<?php

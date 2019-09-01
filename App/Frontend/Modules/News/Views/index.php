@@ -1,4 +1,4 @@
-<div id="homeNews" class="container">
+<div id="homeNews">
 <?php
 	$i = 0;
 	foreach ($listeNews as $news){

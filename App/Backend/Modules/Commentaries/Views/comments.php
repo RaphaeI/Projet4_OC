@@ -1,6 +1,7 @@
 <p style="text-align: center">Il y a actuellement <?= $nombreComments ?> commentaire(s). En voici la liste :</p>
- 
-<table>
+<div class="table-responsive-sm">
+
+<table class="table">
   <tr><th>Id</th><th>News</th><th>Auteur</th><th>Date d'ajout</th><th>Dernière modification</th><th>Action</th><th>Signalé</th></tr>
 <?php
 foreach ($listComments as $comments)
@@ -25,3 +26,4 @@ foreach ($listComments as $comments)
 <?php }
 ?>
 </table>
+</div>

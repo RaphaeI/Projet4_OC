@@ -1,6 +1,8 @@
 <h2>connexion à l'espace d'administration</h2>
 <form action="" method="post">
-	  <input type="text" name="login" />
-	  <label>Login</label><input type="password" name="password" /> 
-	  <label>Mdp</label><input type="submit" value="Connexion" />
+	<label>Login</label>
+	<input type="text" name="login" />
+	<label>Mot de passe</label>
+	<input type="password" name="password" /> 
+	<input type="submit" value="Connexion" />
 </form>

@@ -1,6 +1,6 @@
 <p style="text-align: center">Il y a actuellement <?= $nombreNews ?> news. En voici la liste :</p>
  
-<table>
+<table class="table">
   <tr><th>Auteur</th><th>Titre</th><th>Date d'ajout</th><th>Dernière modification</th><th>Action</th></tr>
 <?php
 foreach ($listeNews as $news)

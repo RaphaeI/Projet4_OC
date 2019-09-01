@@ -14,14 +14,20 @@ a:hover{
 }
 
 h2{
-		text-transform: lowercase;
+	text-transform: lowercase;
 	font-weight: bold;
+	text-align: center;
 }
+
+
 
 /* HEADER */
 
 header{
 	text-align: left;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
 	background-color: white;
 	padding: 10px 0 10px 0;
 	font-size: 0.8em;
@@ -90,15 +96,29 @@ section{
     align-items: center;
 	padding: 2%;
 	margin-bottom: 2%;
-	width: 50%;
+	width: 100%;
 	transition: .3s ease-in;
 	transform: translateZ(0);
 	backface-visibility: hidden;
 }
-
 section:hover{
 
 -webkit-transform: scale(1.04)
+}
+
+section:nth-child(odd), section:nth-child(odd) a{
+	background-color: #444;
+	color: white;
+}
+
+section:nth-child(odd) .button{
+	border: 2px solid white;
+	background: linear-gradient(to right, white 50%, #444 50%);
+	border-radius: 3px;
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all .3s ease-out;
+	padding: 10px;
 }
 
 article{
@@ -121,7 +141,7 @@ form {
 /* ADMIN */
 
 input{
-	margin-bottom: 1%;
+	margin-bottom: 5%;
 }
 
 input{
@@ -158,6 +178,8 @@ hr.line{
 #adminPanel{
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+    justify-content: center;
 }
 
 #adminPanel>div{
@@ -184,34 +206,6 @@ table{
 	margin-bottom: 2%;
 }
 
-section:nth-child(4n+1), section:nth-child(4n+4){
-	background-color: #444;
-	color: white;
-}
-
-section:nth-child(4n+1) a, section:nth-child(4n+4) a{
-	color: white;
-}
-
-section:nth-child(4n+1) a:hover, section:nth-child(4n+4) a:hover{
-	color : #929292;
-}
-
-section:nth-child(4n+1) .button, section:nth-child(4n+4) .button{
-	border: 2px solid white;
-	background: linear-gradient(to right, white 50%, #444 50%);
-	border-radius: 3px;
-	background-size: 200% 100%;
-	background-position: right bottom;
-	transition: all .3s ease-out;
-	padding: 10px;
-}
-
-section:nth-child(4n+1) .button:hover, section:nth-child(4n+4) .button:hover{
-	  background-position: left bottom;
-	  color: #444;
-}
-
 .redflag{
 	color: red;
 }
@@ -221,4 +215,47 @@ section:nth-child(4n+1) .button:hover, section:nth-child(4n+4) .button:hover{
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 2%;
+}
+
+#commIcons{
+	flex-direction: row;
+}
+
+@media (min-width: 768px){
+
+	section{
+		width: 50%;
+	}
+
+	section:nth-child(4n+1), section:nth-child(4n+4), section:nth-child(4n+1) a, section:nth-child(4n+4) a{
+	background-color: #444 !important;
+	color: white !important;
+	}
+
+	section:nth-child(4n+1) a:hover, section:nth-child(4n+4) a:hover{
+		color : #929292;
+	}
+
+	section:nth-child(4n+1) .button, section:nth-child(4n+4) .button{
+		border: 2px solid white;
+		background: linear-gradient(to right, white 50%, #444 50%);
+		border-radius: 3px;
+		background-size: 200% 100%;
+		background-position: right bottom;
+		transition: all .3s ease-out;
+		padding: 10px;
+	}
+
+	section:nth-child(4n+1) .button:hover, section:nth-child(4n+4) .button:hover{
+		  background-position: left bottom;
+		  color: #444;
+	}
+
+	section:nth-child(odd), section:nth-child(odd) a{
+
+	}
+
+	section:nth-child(odd) .button{
+
+	}
 }

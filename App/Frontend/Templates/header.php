@@ -2,7 +2,6 @@
 	<nav>
 		<ul>
 			<li><a href="http://projet4/">Accueil</a></li>
-			<li>Derniers articles</li>
 			<li>à propos</li>
 			<li>contact</li>
 			<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] === true){ ?>
