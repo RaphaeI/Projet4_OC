@@ -106,20 +106,7 @@ section:hover{
 -webkit-transform: scale(1.04)
 }
 
-section:nth-child(odd), section:nth-child(odd) a{
-	background-color: #444;
-	color: white;
-}
 
-section:nth-child(odd) .button{
-	border: 2px solid white;
-	background: linear-gradient(to right, white 50%, #444 50%);
-	border-radius: 3px;
-	background-size: 200% 100%;
-	background-position: right bottom;
-	transition: all .3s ease-out;
-	padding: 10px;
-}
 
 article{
 	display: flex !important;
@@ -251,11 +238,23 @@ table{
 		  color: #444;
 	}
 
+}
+
+
+@media (max-width: 767px){
+	
 	section:nth-child(odd), section:nth-child(odd) a{
+	background-color: #444;
+	color: white;
+}
 
-	}
-
-	section:nth-child(odd) .button{
-
-	}
+section:nth-child(odd) .button{
+	border: 2px solid white;
+	background: linear-gradient(to right, white 50%, #444 50%);
+	border-radius: 3px;
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all .3s ease-out;
+	padding: 10px;
+}
 }
