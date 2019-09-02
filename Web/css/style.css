@@ -1,5 +1,4 @@
 body{
-	/* background-color: #ECECEC !important; */
 	background: url("../imgs/bg2.jpg"), #3c425c;
 	background-position-x: center;
 	background-repeat: no-repeat;
@@ -15,14 +14,6 @@ a:hover{
     text-decoration: none;
     transition: all 0.5s ease;
 }
-
-h2{
-	text-transform: lowercase;
-	font-weight: bold;
-	text-align: center;
-}
-
-
 
 /* HEADER */
 
@@ -64,7 +55,6 @@ li{
 	position: absolute;
 	top: 100%;
 	left: 0;
-	background-color: white;
 }
 
 #adminMenu:hover>ul{
@@ -76,6 +66,7 @@ li{
 #brand{
 	color: white;
 	text-align: center;
+	margin: 130px 0 130px 0;
 }
 
 #brand h1{
@@ -95,7 +86,7 @@ li{
 	position: absolute;
 	bottom: -10px;
 	font-size: 1rem;
-    right: -110px;
+    right: 0px;
     font-style: italic;
 }
 
@@ -108,33 +99,44 @@ main{
 	flex-direction: column;
 	align-items: center;
     justify-content: center;
-    padding: 2%;
-	}
+    padding: 0 2% 0 2%;
+}
 
 #homeNews{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: wrap;
+	width: 100%;
 }
 
 section h2,h3{
-	text-align: center;
+	text-align: left;
 }
 
 section{
 	display: flex;
 	flex-direction: column;
-    align-items: center;
-	padding: 2%;
 	margin-bottom: 2%;
 	width: 100%;
 	transition: .3s ease-in;
-	transform: translateZ(0);
-	backface-visibility: hidden;
 	color: white;
 }
-section:hover{
-	-webkit-transform: scale(1.04)
+
+.articleInfos{
+	flex-direction: column;
+}
+
+.articleInfos h2{
+	font-size: 4rem;
+	transition: .2s ease-out;
+}
+
+.articlePreview{
+	flex-direction: column;
+}
+
+.articlePreview a{
+	float: right;
 }
 
 article{
@@ -233,6 +235,37 @@ table{
 }
 
 @media (min-width: 768px){
+
+	#brand h1 .botBrand{
+	    right: -110px;
+	}
+
+	.articlePreview p{
+		transition: .3s;
+	}
+
+	section:hover h2{
+		padding-left: 20px;	
+	}
+
+	section:hover .articlePreview p{
+		color:  #dae3e6;
+	}
+
+
+	.articleInfos{
+	flex-direction: column;
+	max-width: 38%;	
+	}
+
+	.articleInfos h2{
+		font-size: 4rem;
+	}
+
+	.articlePreview{
+		flex-direction: column;
+		padding-left: 160px;
+	}
 
 	#adminPanel{
 		flex-wrap: nowrap;
