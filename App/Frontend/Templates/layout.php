@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
     <script src="https://cdn.tiny.cloud/1/26ywukqer0d0dfv9zm2c0nuvp0szg6glxts0nynvfxm28aui/tinymce/5/tinymce.min.js"></script>
-    <script>tinymce.init({selector:'textarea'});</script>
+    <script>tinymce.init(
+      {selector:'textarea', content_css:'css/style.css'
+      });</script>
   </head>
   
   <body>
