@@ -1,4 +1,4 @@
-<h2>Ajouter une news</h2>
+<h3>Ajouter une news</h3>
 <form action="" method="post">
     <?= $form ?>
  

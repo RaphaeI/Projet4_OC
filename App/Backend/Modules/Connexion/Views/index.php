@@ -1,4 +1,4 @@
-<h2>connexion à l'espace d'administration</h2>
+<h3>connexion à l'espace d'administration</h3>
 <form action="" method="post">
 	<label>Login</label>
 	<input type="text" name="login" />

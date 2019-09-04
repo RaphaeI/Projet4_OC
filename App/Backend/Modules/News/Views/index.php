@@ -1,4 +1,4 @@
-<h2>Espace administration</h2>
+<h3>Espace administration</h3>
 <div id="adminPanel">
 	<div>
 		<a href="/admin/article">
