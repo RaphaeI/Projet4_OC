@@ -3,7 +3,7 @@
 	<nav>
 		<ul>
 			<li><a href="http://projet4/">Accueil</a></li>
-			<li>à propos</li>
+			<li><a href="/about">à propos</a></li>
 			<div id="socialMedia">
 				<li><i class="fab fa-facebook-f"></i></li>
 				<li><i class="fab fa-twitter"></i></li>

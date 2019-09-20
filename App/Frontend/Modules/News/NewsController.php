@@ -90,4 +90,8 @@ class NewsController extends BackController
     $manager->report($request->getData('idComments'));
     $this->app->httpResponse()->redirect('/news-'.$request->getData('idNews').'.html');
   }
+
+  public function executeAbout(){
+  
+  }
 }

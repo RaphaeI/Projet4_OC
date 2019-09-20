@@ -4,4 +4,5 @@
   <route url="/news-([0-9]+)\.html" module="News" action="show" vars="id"></route>
   <route url="/commenter-([0-9]+)\.html" module="News" action="insertComment" vars="news" ></route>
   <route url="/news-([0-9]+)\/comment-report-([0-9]+)\.html" module="News" action="reportcomment" vars="idNews, idComments"></route>
+  <route url="/about" module="News" action="about"></route>
 </routes>
