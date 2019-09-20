@@ -2,7 +2,7 @@
 	<button>&#9776</button>
 	<nav>
 		<ul>
-			<li><a href="http://projet4/">Accueil</a></li>
+			<li><a href="/">Accueil</a></li>
 			<li><a href="/about">à propos</a></li>
 			<div id="socialMedia">
 				<li><i class="fab fa-facebook-f"></i></li>
@@ -11,7 +11,7 @@
 			</div>
 			<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] === true){ ?>
 				<li id="adminMenu">
-					<a href="http://projet4/admin/">administration</a>
+					<a href="/admin/">administration</a>
 					<ul>
 	        			<li><a href="/admin/logout">déconnexion</a></li>
       				</ul>		
