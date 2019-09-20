@@ -1,6 +1,5 @@
 <h3>Ajouter une news</h3>
 <form action="" method="post">
-    <?= $form ?>
- 
+    <?= $form ?> 
     <input type="submit" value="Ajouter" />
 </form>

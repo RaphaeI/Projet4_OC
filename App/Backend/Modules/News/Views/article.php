@@ -1,6 +1,6 @@
 <p style="text-align: center">Il y a actuellement <?= $nombreNews ?> news. En voici la liste :</p>
  
-<table class="table table-striped table-hover table-responsive">
+<table class="table table-striped table-hover table-responsive-sm">
   <tr><th>Auteur</th><th>Titre</th><th>Date d'ajout</th><th>Dernière modification</th><th>Action</th></tr>
 <?php
 foreach ($listeNews as $news)
@@ -17,4 +17,4 @@ foreach ($listeNews as $news)
 </table>
 <a href="http://projet4/admin/news-insert.html">
 	<h3 class="button" >Ajouter une news</h3>
-</a>
+</a>	

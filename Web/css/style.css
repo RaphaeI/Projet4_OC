@@ -1,14 +1,21 @@
+/* GLOBAL */
+
 body{
 	background: url("../imgs/bg2.jpg"), #3c425c;
 	background-position-x: center;
 	background-repeat: no-repeat;
 	font-family: 'Playfair Display', serif;
 	color: white;
-
 }
 
 a{
 	color: white ;
+}
+
+a:hover{
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: all 0.5s ease;
 }
 
 p{
@@ -22,6 +29,14 @@ h3{
 .container-fluid{
 	padding: 0;
 	margin: 0;
+}
+
+#tinymce{
+	background: white !important;
+}
+
+input{
+	margin-bottom: 10px;
 }
 
 /* HEADER */
@@ -192,13 +207,11 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
 }
 
 /* ADMIN */
 
-input{
-	margin-bottom: 5%;
-}
 
 .fa-newspaper, .fa-comments{
 	font-size: 10rem;
@@ -255,6 +268,8 @@ table i{
 
 @media (min-width: 768px){
 
+	/* GLOBAL */
+
 	.container-fluid{
 		padding-right: 15px;
 	    padding-left: 15px;
@@ -262,11 +277,7 @@ table i{
 	    margin-left: auto;
 	}
 
-	a:hover{
-	    color: #f3f3f3;
-	    text-decoration: none;
-	    transition: all 0.5s ease;
-	}
+	/* HEADER */
 
 	header{
 		display: block;
@@ -303,9 +314,13 @@ table i{
 		display: none;
 	}
 
+	/* BRAND */
+
 	#brand h1 .botBrand{
 	    right: -110px;
 	}
+
+	/* ARTICLES */
 
 	.articlePreview p{
 		transition: .3s;
@@ -325,8 +340,8 @@ table i{
 	}
 
 	.articleInfos{
-	flex-direction: column;
-	max-width: 38%;	
+		flex-direction: column;
+		max-width: 38%;	
 	}
 
 	.articleInfos h2{
@@ -337,6 +352,8 @@ table i{
 		flex-direction: column;
 		padding-left: 160px;
 	}
+
+	/* ADMIN PANEL */
 
 	#adminPanel{
 		flex-wrap: nowrap;
