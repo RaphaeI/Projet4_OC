@@ -26,16 +26,14 @@
 		<h5>Posté par <?= htmlspecialchars($comment['auteur']) ?> le <?= $comment['date']->format('d/m/Y à H\hi') ?></h5>   
 		<p><?= strip_tags($comment['contenu']) ?></p>
 		<?php if ($user->isAuthenticated()) { ?>
-		<div id="commIcons">
-	      <a href="admin/comment-update-<?= $comment['id'] ?>.html"><i class="fas fa-edit"></i></a>
-	      <a href="admin/comment-delete-<?= $comment['id'] ?>.html"><i class="fas fa-trash"></i></a>
-		    <?php } 
-		    	if($comment['reported' == false]){
-		    ?>
-		      <a href="/news-<?= $comment['news']?>/comment-report-<?= $comment['id'] ?>.html"><i class="fas fa-flag redflag"></i></a>
-	    </div>
-	    <?php } ?>
-
+			<div id="commIcons">
+		      <a href="admin/comment-update-<?= $comment['id'] ?>.html"><i class="fas fa-edit"></i></a>
+		      <a href="admin/comment-delete-<?= $comment['id'] ?>.html"><i class="fas fa-trash"></i></a>
+			    <?php } 
+			    	if($comment['reported'] == 0){?>
+			      <a href="/news-<?= $comment['news']?>/comment-report-<?= $comment['id'] ?>.html"><i class="fas fa-flag redflag"></i></a>
+		    </div>
+	    			<?php } ?>
 	</div>
 
 	<?php
