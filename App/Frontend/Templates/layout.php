@@ -15,6 +15,7 @@
     <script>tinymce.init(
       {selector:'textarea', content_css:'css/style.css', width: "100%", backgroundcolor: "white"
       })</script>
+    <script src='https://www.google.com/recaptcha/api.js'></script> 
   </head>
   
   <body>

@@ -8,7 +8,7 @@
     <tr>
     		<td><?php echo $comments['id'] ?></td>
         <td><?php echo $comments['news']?></td>
-       <td><?php echo $comments['auteur'] ?></td>
+       <td><?php echo htmlspecialchars($comments['auteur'])?></td>
        <td><?php echo $comments['date']->format('d/m/Y à H\hi') ?></td>
        <td><?php echo ($comments['date'] == $comments['date'] ? '-' : 'le '.$comments['date']->format('d/m/Y à H\hi')) ?></td>
        <td><?php echo '<a href="comment-update-', $comments['id'], '.html"><i class="fas fa-edit"></i></a> <a href="comment-delete-',
